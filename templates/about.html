@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Sistema de Detección de Imágenes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+        .feature-card {
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #0d6efd;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        .team-member {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">Sistema de Detección de Imágenes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/about">Acerca de</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Acerca del Sistema</h1>
+                    <p class="lead mb-4">El Sistema de Detección y Validación de Imágenes es una herramienta avanzada que utiliza técnicas de visión por computadora y aprendizaje profundo para analizar características específicas en imágenes.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://via.placeholder.com/600x400?text=Tecnología+Avanzada" alt="Tecnología Avanzada" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Tecnologías Utilizadas</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="tech-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>El sistema está desarrollado en Python, un lenguaje de programación versátil y potente, ideal para aplicaciones de inteligencia artificial y procesamiento de datos.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="tech-icon">🧠</div>
+                    <h3>TensorFlow</h3>
+                    <p>Utilizamos TensorFlow, una biblioteca de código abierto para aprendizaje automático desarrollada por Google, para implementar modelos de detección de objetos.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="tech-icon">👁️</div>
+                    <h3>OpenCV</h3>
+                    <p>OpenCV (Open Source Computer Vision Library) nos permite implementar algoritmos de visión por computadora para el análisis de imágenes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="tech-icon">📊</div>
+                    <h3>scikit-learn</h3>
+                    <p>Biblioteca de aprendizaje automático para Python que proporciona herramientas simples y eficientes para análisis predictivo y minería de datos.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="tech-icon">🔤</div>
+                    <h3>Tesseract OCR</h3>
+                    <p>Motor de reconocimiento óptico de caracteres (OCR) utilizado para extraer texto de imágenes, fundamental para la detección de RUT.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="tech-icon">🌐</div>
+                    <h3>Flask</h3>
+                    <p>Framework web ligero y flexible para Python que nos permite crear la interfaz web del sistema de manera rápida y eficiente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características y Capacidades -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Características y Capacidades</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="mb-3">Detección de Características</h3>
+                <ul class="list-group mb-4">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Detección de fondo blanco
+                        <span class="badge bg-primary rounded-pill">F1 Score: 0.80</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Detección de personas
+                        <span class="badge bg-warning rounded-pill">En desarrollo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Identificación de cédulas de identidad
+                        <span class="badge bg-success rounded-pill">F1 Score: 1.00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Reconocimiento de RUT chileno
+                        <span class="badge bg-primary rounded-pill">F1 Score: 0.33</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="mb-3">Capacidades del Sistema</h3>
+                <div class="accordion" id="accordionCapabilities">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Análisis en tiempo real
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionCapabilities">
+                            <div class="accordion-body">
+                                El sistema procesa las imágenes en cuestión de segundos, proporcionando resultados inmediatos sobre las características detectadas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Informes detallados
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionCapabilities">
+                            <div class="accordion-body">
+                                Generación automática de informes con visualizaciones, niveles de confianza y metadatos específicos para cada característica detectada.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                API para integración
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionCapabilities">
+                            <div class="accordion-body">
+                                El sistema ofrece una API REST que permite integrarlo fácilmente con otras aplicaciones y servicios.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mejoras Futuras -->
+    <section class="container mb-5">
+        <h2 class="text-center mb-4">Mejoras Futuras</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Mejoras Planificadas</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Mejora del detector de personas con imágenes reales</li>
+                            <li class="list-group-item">Optimización del reconocimiento de RUT</li>
+                            <li class="list-group-item">Implementación de procesamiento por lotes</li>
+                            <li class="list-group-item">Interfaz de usuario mejorada con más opciones de configuración</li>
+                            <li class="list-group-item">Soporte para más tipos de documentos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Investigación en Curso</h3>
+                        <p class="card-text">Estamos investigando constantemente nuevas técnicas y algoritmos para mejorar la precisión y eficiencia del sistema:</p>
+                        <ul>
+                            <li>Implementación de modelos YOLO para detección de objetos</li>
+                            <li>Uso de transformers para mejorar el OCR</li>
+                            <li>Técnicas de aumento de datos para entrenar con conjuntos limitados</li>
+                            <li>Optimización para dispositivos móviles</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Sistema de Detección de Imágenes</h5>
+                    <p>Una herramienta avanzada para el análisis y validación de características en imágenes.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/about">Acerca de</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@detectorimagen.com</li>
+                        <li>Teléfono: +56 9 1234 5678</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2025 Sistema de Detección de Imágenes. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

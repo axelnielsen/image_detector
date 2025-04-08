@@ -1,0 +1,18 @@
+{
+  "fondo_blanco": false,
+  "persona": false,
+  "cedula": false,
+  "rut": false,
+  "confidence": {
+    "fondo_blanco": 1.0,
+    "persona": 0.0,
+    "cedula": 0.0,
+    "rut": 0.0
+  },
+  "metadata": {
+    "fondo_blanco": {
+      "porcentaje_blanco": 0.5844449330597088
+    },
+    "rut": null
+  }
+}

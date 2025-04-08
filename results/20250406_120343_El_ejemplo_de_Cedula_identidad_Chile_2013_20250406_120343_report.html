@@ -1,0 +1,122 @@
+
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Informe de Validación de Imagen</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+                .container { max-width: 1000px; margin: 0 auto; }
+                .header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; margin-bottom: 20px; }
+                .results { display: flex; flex-wrap: wrap; }
+                .result-card { background-color: #f9f9f9; border-radius: 5px; padding: 15px; margin: 10px; flex: 1; min-width: 200px; }
+                .positive { color: green; }
+                .negative { color: red; }
+                .images { display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 20px; }
+                .image-container { flex: 1; min-width: 300px; margin: 10px; }
+                img { max-width: 100%; border: 1px solid #ddd; border-radius: 5px; }
+                table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+                th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+                th { background-color: #f2f2f2; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>Informe de Validación de Imagen</h1>
+                    <p>Fecha: 06/04/2025 12:03:43</p>
+                    <p>Imagen: 20250406_120343_El_ejemplo_de_Cedula_identidad_Chile_2013.jpg</p>
+                </div>
+                
+                <h2>Resultados de la Validación</h2>
+                <div class="results">
+        
+                    <div class="result-card">
+                        <h3>Fondo Blanco</h3>
+                        <p class="negative">
+                            <strong>No Detectado</strong>
+                        </p>
+                        <p>Confianza: 1.00</p>
+                    </div>
+                
+                    <div class="result-card">
+                        <h3>Persona</h3>
+                        <p class="positive">
+                            <strong>Detectado</strong>
+                        </p>
+                        <p>Confianza: 0.72</p>
+                    </div>
+                
+                    <div class="result-card">
+                        <h3>Cedula</h3>
+                        <p class="negative">
+                            <strong>No Detectado</strong>
+                        </p>
+                        <p>Confianza: 0.00</p>
+                    </div>
+                
+                    <div class="result-card">
+                        <h3>Rut</h3>
+                        <p class="negative">
+                            <strong>No Detectado</strong>
+                        </p>
+                        <p>Confianza: 0.00</p>
+                    </div>
+                
+                </div>
+                
+                <h2>Detalles</h2>
+                <table>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Resultado</th>
+                        <th>Confianza</th>
+                        <th>Detalles</th>
+                    </tr>
+        
+                    <tr>
+                        <td>Fondo Blanco</td>
+                        <td class="negative">No</td>
+                        <td>1.00</td>
+                        <td>Porcentaje de blanco: 19.9%</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Persona</td>
+                        <td class="positive">Sí</td>
+                        <td>0.72</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Cedula</td>
+                        <td class="negative">No</td>
+                        <td>0.00</td>
+                        <td></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Rut</td>
+                        <td class="negative">No</td>
+                        <td>0.00</td>
+                        <td></td>
+                    </tr>
+                
+                </table>
+                
+                <h2>Imágenes</h2>
+                <div class="images">
+                    <div class="image-container">
+                        <h3>Imagen Original</h3>
+                        <img src="20250406_120343_El_ejemplo_de_Cedula_identidad_Chile_2013.jpg" alt="Imagen Original">
+                    </div>
+                    <div class="image-container">
+                        <h3>Resultados Visualizados</h3>
+                        <img src="20250406_120343_El_ejemplo_de_Cedula_identidad_Chile_2013_20250406_120343_results.jpg" alt="Resultados Visualizados">
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
+        
