@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado del Análisis - Detector de Patrones Oscuros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-search-shield"></i> Detector de Patrones Oscuros</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="task-status">
+            <h2>Estado del Análisis</h2>
+            <div class="task-info">
+                <p><strong>ID de Tarea:</strong> <span id="task-id">{{ task_id }}</span></p>
+                <p><strong>Estado:</strong> <span id="task-status">Cargando...</span></p>
+                <p><strong>Progreso:</strong> <span id="task-progress">0%</span></p>
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar" style="width: 0%;"></div>
+                </div>
+                <p><strong>URLs procesadas:</strong> <span id="processed-urls">0</span>/<span id="total-urls">0</span></p>
+                <p><strong>Tiempo transcurrido:</strong> <span id="elapsed-time">0:00</span></p>
+            </div>
+        </section>
+
+        <section class="task-results hidden" id="results-section">
+            <h2>Resultados del Análisis</h2>
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>URLs Analizadas</h3>
+                    <p id="total-success">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>URLs con Errores</h3>
+                    <p id="total-failed">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>Patrones Detectados</h3>
+                    <p id="total-detections">0</p>
+                </div>
+            </div>
+
+            <div class="results-list">
+                <h3>Detalle por URL</h3>
+                <div class="results-table-container">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>URL</th>
+                                <th>Título</th>
+                                <th>Estado</th>
+                                <th>Patrones</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-table-body">
+                            <!-- Filas de resultados se añadirán dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="export-options">
+                <h3>Exportar Resultados</h3>
+                <button id="export-summary-csv" class="btn btn-secondary">
+                    <i class="fas fa-file-csv"></i> Exportar Resumen CSV
+                </button>
+                <button id="export-all-json" class="btn btn-secondary">
+                    <i class="fas fa-file-code"></i> Exportar Todos los Informes JSON
+                </button>
+            </div>
+        </section>
+
+        <section class="task-error hidden" id="error-section">
+            <h2>Error en el Análisis</h2>
+            <div class="error-message">
+                <i class="fas fa-exclamation-circle"></i>
+                <p id="error-text">Ha ocurrido un error durante el análisis.</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="btn btn-primary">
+                <i class="fas fa-home"></i> Volver al Inicio
+            </a>
+        </section>
+    </main>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loading-message">Cargando detalles...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Detector de Patrones Oscuros - Herramienta para identificar prácticas manipulativas en sitios web</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/task.js') }}"></script>
+</body>
+</html>

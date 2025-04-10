@@ -1,0 +1,11 @@
+url,category,expected_patterns
+https://www.example.com,general,none
+https://www.amazon.com,ecommerce,"preselection,false_urgency,hidden_costs"
+https://www.booking.com,travel,"false_urgency,confusing_interface"
+https://www.linkedin.com,social,"difficult_cancellation,preselection"
+https://www.aliexpress.com,ecommerce,"false_urgency,hidden_costs,confirmshaming"
+https://www.ryanair.com,travel,"hidden_costs,confusing_interface,preselection"
+https://www.facebook.com,social,"difficult_cancellation,misleading_ads"
+https://www.ebay.com,ecommerce,"false_urgency,misleading_ads"
+https://www.expedia.com,travel,"false_urgency,hidden_costs"
+https://www.wish.com,ecommerce,"false_urgency,hidden_costs,confirmshaming"

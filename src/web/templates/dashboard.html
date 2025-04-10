@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Detector de Patrones Oscuros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-search-shield"></i> Detector de Patrones Oscuros</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Inicio</a></li>
+                    <li><a href="{{ url_for('dashboard') }}" class="active">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard-header">
+            <h2>Dashboard de Patrones Oscuros</h2>
+            <p>Visualización de estadísticas y tendencias de los análisis realizados.</p>
+        </section>
+
+        <section class="dashboard-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Análisis Realizados</h3>
+                    <p id="total-tasks">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>URLs Analizadas</h3>
+                    <p id="total-urls">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>Patrones Detectados</h3>
+                    <p id="total-detections">0</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-charts">
+            <div class="chart-container">
+                <h3>Distribución de Patrones Oscuros</h3>
+                <canvas id="patterns-chart"></canvas>
+            </div>
+        </section>
+
+        <section class="dashboard-info">
+            <h3>Tipos de Patrones Oscuros</h3>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4><i class="fas fa-thumbs-down"></i> Confirmshaming</h4>
+                    <p>Avergüenza al usuario por rechazar una oferta utilizando lenguaje culpabilizador.</p>
+                    <div class="pattern-example">
+                        <strong>Ejemplo:</strong> "No gracias, no me interesa ahorrar dinero"
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-check-square"></i> Preselección</h4>
+                    <p>Opciones preseleccionadas que benefician al sitio pero no necesariamente al usuario.</p>
+                    <div class="pattern-example">
+                        <strong>Ejemplo:</strong> Casillas de suscripción marcadas por defecto
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-money-bill-wave"></i> Cargos ocultos</h4>
+                    <p>Costos adicionales revelados tarde en el proceso de compra.</p>
+                    <div class="pattern-example">
+                        <strong>Ejemplo:</strong> Tasas de servicio añadidas en el último paso
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-lock"></i> Difícil cancelación</h4>
+                    <p>Suscripciones fáciles de iniciar pero difíciles de cancelar.</p>
+                    <div class="pattern-example">
+                        <strong>Ejemplo:</strong> Obligar a llamar por teléfono para cancelar
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-ad"></i> Publicidad engañosa</h4>
+                    <p>Anuncios que se camuflan como contenido o funcionalidades del sitio.</p>
+                    <div class="pattern-example">
+                        <strong>Ejemplo:</strong> Anuncios con apariencia de botones de descarga
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-hourglass-half"></i> Falsa urgencia</h4>
+                    <p>Contadores o mensajes que crean una sensación artificial de urgencia o escasez.</p>
+                    <div class="pattern-example">
+                        <strong>Ejemplo:</strong> "¡Solo quedan 2 unidades!" (falso)
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h4><i class="fas fa-random"></i> Interfaces confusas</h4>
+                    <p>Diseños que confunden al usuario para que realice acciones no deseadas.</p>
+                    <div class="pattern-example">
+                        <strong>Ejemplo:</strong> Botones de aceptar/rechazar con colores invertidos
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loading-message">Cargando datos...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Detector de Patrones Oscuros - Herramienta para identificar prácticas manipulativas en sitios web</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

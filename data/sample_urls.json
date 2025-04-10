@@ -1,0 +1,27 @@
+[
+  {
+    "url": "https://www.amazon.com",
+    "name": "Amazon",
+    "category": "E-commerce"
+  },
+  {
+    "url": "https://www.booking.com",
+    "name": "Booking",
+    "category": "Travel"
+  },
+  {
+    "url": "https://www.netflix.com",
+    "name": "Netflix",
+    "category": "Streaming"
+  },
+  {
+    "url": "https://www.facebook.com",
+    "name": "Facebook",
+    "category": "Social Media"
+  },
+  {
+    "url": "https://www.airbnb.com",
+    "name": "Airbnb",
+    "category": "Travel"
+  }
+]

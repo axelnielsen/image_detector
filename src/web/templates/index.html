@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Patrones Oscuros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-search-shield"></i> Detector de Patrones Oscuros</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="active">Inicio</a></li>
+                    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Detecta patrones oscuros en sitios web</h2>
+            <p>Esta herramienta analiza automáticamente sitios web para identificar patrones oscuros (dark patterns) que manipulan a los usuarios. Detecta confirmshaming, preselección de opciones, cargos ocultos, suscripciones difíciles de cancelar, publicidad engañosa, falsos contadores de urgencia e interfaces confusas.</p>
+        </section>
+
+        <div class="analysis-options">
+            <div class="option-card">
+                <h3><i class="fas fa-file-upload"></i> Cargar archivo de URLs</h3>
+                <p>Carga un archivo CSV, JSON o TXT con las URLs que deseas analizar.</p>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="file-input-container">
+                        <input type="file" id="file-input" name="file" accept=".csv,.json,.txt">
+                        <label for="file-input" class="file-label">
+                            <i class="fas fa-cloud-upload-alt"></i> Seleccionar archivo
+                        </label>
+                        <span id="file-name">Ningún archivo seleccionado</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-upload"></i> Cargar y analizar
+                    </button>
+                </form>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-link"></i> Analizar URLs directamente</h3>
+                <p>Ingresa una o varias URLs para analizarlas directamente.</p>
+                <form id="direct-form">
+                    <textarea id="direct-urls" placeholder="Ingresa las URLs (una por línea)&#10;Ejemplo:&#10;https://www.ejemplo1.com&#10;https://www.ejemplo2.com" rows="5"></textarea>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-search"></i> Analizar URLs
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <section class="patterns-info">
+            <h2>Patrones oscuros detectados</h2>
+            <div class="patterns-grid">
+                <div class="pattern-card">
+                    <i class="fas fa-thumbs-down"></i>
+                    <h3>Confirmshaming</h3>
+                    <p>Avergüenza al usuario por rechazar una oferta utilizando lenguaje culpabilizador.</p>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-check-square"></i>
+                    <h3>Preselección</h3>
+                    <p>Opciones preseleccionadas que benefician al sitio pero no necesariamente al usuario.</p>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Cargos ocultos</h3>
+                    <p>Costos adicionales revelados tarde en el proceso de compra.</p>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Difícil cancelación</h3>
+                    <p>Suscripciones fáciles de iniciar pero difíciles de cancelar.</p>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-ad"></i>
+                    <h3>Publicidad engañosa</h3>
+                    <p>Anuncios que se camuflan como contenido o funcionalidades del sitio.</p>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-hourglass-half"></i>
+                    <h3>Falsa urgencia</h3>
+                    <p>Contadores o mensajes que crean una sensación artificial de urgencia o escasez.</p>
+                </div>
+                <div class="pattern-card">
+                    <i class="fas fa-random"></i>
+                    <h3>Interfaces confusas</h3>
+                    <p>Diseños que confunden al usuario para que realice acciones no deseadas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="loading-overlay" class="hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loading-message">Procesando solicitud...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Detector de Patrones Oscuros - Herramienta para identificar prácticas manipulativas en sitios web</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

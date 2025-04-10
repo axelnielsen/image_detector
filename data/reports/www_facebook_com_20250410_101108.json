@@ -1,0 +1,58 @@
+{
+  "url": "https://www.facebook.com",
+  "timestamp": "2025-04-10T10:11:08.820083",
+  "title": "Facebook - log in or sign up",
+  "summary": {
+    "total_patterns_detected": 1,
+    "pattern_types_detected": [
+      "difficult_cancellation"
+    ],
+    "severity_score": 7.2
+  },
+  "screenshots": {
+    "initial": "data/screenshots/initial_www_facebook_com.png",
+    "full": "data/screenshots/full_www_facebook_com.png"
+  },
+  "patterns": [
+    {
+      "type": "difficult_cancellation",
+      "count": 1,
+      "detections": [
+        {
+          "pattern_type": "difficult_cancellation",
+          "evidence_type": "no_cancellation_links",
+          "evidence": {
+            "sections": [
+              {
+                "path": "body",
+                "text": "requirelazy([\"bootstrapwebsession\"],function(j){j(1744294266)})connect with friends and the world ar"
+              },
+              {
+                "path": "body > DIV[1]",
+                "text": "connect with friends and the world around you on facebook.log inforgot password?create new accountcr"
+              },
+              {
+                "path": "body > DIV[1] > DIV[0]",
+                "text": "connect with friends and the world around you on facebook.log inforgot password?create new accountcr"
+              },
+              {
+                "path": "body > DIV[1] > DIV[0] > DIV[0]",
+                "text": "connect with friends and the world around you on facebook.log inforgot password?create new accountcr"
+              }
+            ]
+          },
+          "confidence": 0.7200000000000001,
+          "location": "Falta de enlaces de cancelación",
+          "screenshot": "data/screenshots/full_www_facebook_com.png",
+          "improvement_suggestion": "Haga que el proceso de cancelación sea tan sencillo como el de suscripción. Proporcione un enlace directo a la cancelación."
+        }
+      ],
+      "improvement_suggestions": [
+        "Haga que el proceso de cancelación sea tan sencillo como el de suscripción. Proporcione un enlace directo a la cancelación.",
+        "Haga que el proceso de cancelación sea tan sencillo como el de suscripción.",
+        "Proporcione un enlace directo a la cancelación en áreas visibles.",
+        "Evite procesos de múltiples pasos o llamadas telefónicas obligatorias para cancelar."
+      ]
+    }
+  ]
+}

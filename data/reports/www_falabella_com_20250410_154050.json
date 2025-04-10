@@ -1,0 +1,15 @@
+{
+  "url": "https://www.falabella.com/falabella-cl",
+  "timestamp": "2025-04-10T15:40:50.116604",
+  "title": "falabella.com | Todo lo que necesitas en un solo lugar",
+  "summary": {
+    "total_patterns_detected": 0,
+    "pattern_types_detected": [],
+    "severity_score": 0.0
+  },
+  "screenshots": {
+    "initial": "/Users/axel/Documents/APPS/dark_patterns_detector/data/screenshots/initial_www_falabella_com.png",
+    "full": "/Users/axel/Documents/APPS/dark_patterns_detector/data/screenshots/full_www_falabella_com.png"
+  },
+  "patterns": []
+}

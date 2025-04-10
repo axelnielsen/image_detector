@@ -1,0 +1,2 @@
+URL,Título,Fecha,Total Patrones,Puntuación de Severidad,Tipo de Patrón,Número de Detecciones,Ubicación,Confianza,Sugerencia de Mejora
+https://www.facebook.com,Facebook - log in or sign up,2025-04-10T10:11:08.820083,1,7.2,difficult_cancellation,1,Falta de enlaces de cancelación,0.7200000000000001,Haga que el proceso de cancelación sea tan sencillo como el de suscripción. Proporcione un enlace directo a la cancelación.

@@ -1,0 +1,8 @@
+https://www.amazon.com
+https://www.booking.com
+https://www.netflix.com
+https://www.facebook.com
+https://www.airbnb.com
+
+# Este es un archivo de ejemplo con URLs para pruebas
+# Las líneas que comienzan con # son comentarios y serán ignoradas

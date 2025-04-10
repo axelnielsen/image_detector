@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "total_sites": 2,
+    "total_patterns": 1,
+    "average_severity": 0.0
+  },
+  "pattern_distribution": {
+    "confirmshaming": 0,
+    "preselection": 0,
+    "hidden_costs": 0,
+    "difficult_cancellation": 1,
+    "misleading_ads": 0,
+    "false_urgency": 0,
+    "confusing_interface": 0
+  },
+  "sites": [
+    {
+      "url": "https://www.ryanair.com",
+      "title": "Official Ryanair website | Cheap flights in Europe | Ryanair",
+      "severity": 0,
+      "total_patterns": 0,
+      "patterns": {}
+    },
+    {
+      "url": "https://www.facebook.com",
+      "title": "Facebook - log in or sign up",
+      "severity": 0,
+      "total_patterns": 1,
+      "patterns": {
+        "difficult_cancellation": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://www.example.com",
+  "timestamp": "2025-04-10T09:28:31.711515",
+  "type": "test_evidence",
+  "description": "Esta es una evidencia de prueba",
+  "data": {
+    "test_key": "test_value",
+    "screenshot_paths": {
+      "initial": "/home/ubuntu/dark_patterns_detector/data/screenshots/initial_www_example_com.png",
+      "full": "/home/ubuntu/dark_patterns_detector/data/screenshots/full_www_example_com.png"
+    }
+  }
+}
